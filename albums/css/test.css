@@ -1,0 +1,156 @@
+/*
+*   author: Wiebe Ranzijn MG1A
+*/
+
+
+/* 
+    global settings 
+*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+a {
+    color: #000;
+    text-transform: capitalize;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #000;
+    
+}
+
+h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+section > p {
+    font-weight: 500;
+    color: #000000;
+}
+
+.wrapper {
+    display: grid;
+}
+
+.head_img {
+    height: 300px;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+
+header, 
+aside, 
+footer,
+section {
+    padding: 10px;
+}
+
+header {
+    background-color: #acacac;
+    color: white;
+}
+
+aside {
+    background-color: #fafafa;
+}
+
+footer {
+    color: #000 !important;
+    background-color: #eeeeee;
+}
+
+section {
+    box-shadow: none;
+}
+
+/* section background colors */
+
+
+/*
+    grid settings
+*/
+
+/* mobile width */
+@media screen and (max-width: 640px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+    .head_img {
+        background-image: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2F40.media.tumblr.com%2F1baee901523b591462455e6dce7add79%2Ftumblr_nmggb9Vu5g1tv4hrso2_1280.jpg&f=1");
+    }
+
+    section:nth-child(odd) {
+        border: none;
+    }
+
+    section:nth-child(even) {
+        border-top: solid 2px #000;
+        border-bottom: solid 2px #000;
+    }
+}
+
+/* tablet width */
+@media screen and (min-width: 640px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header {
+        grid-column: 1/3;
+    }
+
+    section {
+        margin: 10px;
+    }
+
+    .head_img {
+        background-image: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fjoshuareis.com%2Fword%2Fwp-content%2Fuploads%2F2014%2F05%2FIMG_5492_L2.jpg&f=1");
+        grid-column: 1/3;
+    }
+
+    section:nth-child(even) {
+        border: solid 2px #000;
+    }
+}
+
+/* latop/pc width */
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    header {
+        grid-column: 1/4;
+    }
+
+    aside {
+        grid-column: 1/2;
+    }
+
+    footer {
+        grid-column: 2/4;
+    }
+
+    section:nth-child(12) {
+        grid-column: 1/4;
+    }
+
+    .head_img {
+        background-image: url("https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fphotogrist.com%2Fwp-content%2Fuploads%2F2015%2F05%2FFreddie-Ardley2.jpg&f=1");
+        grid-column: 1/4;
+    }
+
+    section:nth-child(even) {
+        border: solid 2px #000;
+    }
+}
