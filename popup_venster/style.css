@@ -1,0 +1,105 @@
+/*
+*   auhtor: Wiebe Ranzijn
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
+
+img {
+    width: 200px;
+}
+
+.btn_menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    z-index: 101;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
+.btn_menu img {
+    z-index: 100;
+    width: 50px;
+    transition: 0.4s;
+}
+.clicked img {
+    transform: rotate(90deg);
+}
+
+.side_menu {
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 760px;
+    background: #303030;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s;
+    z-index: 50;
+}
+
+nav {
+    position: relative;
+    top: 90px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    cursor: pointer;
+    text-transform: uppercase;
+    list-style: none;
+    background: #3f3f3f;
+    margin: 0;
+    padding: 10px;
+    transition: 0.3s;
+}
+nav li:nth-child(even) {
+    border-top: solid 1px #afafaf;
+    border-bottom: solid 1px #afafaf;
+}
+nav li:hover {
+    background: #535353;
+}
+
+.active {
+    border-left: solid 10px #ff6d6d;
+}
+
+.content {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    max-width: 1000px;
+    margin: 20px;
+    transition: 0.4s;
+    line-height: 1.7;
+    z-index: 40;
+}
+
+.content img,
+.content h1 {
+    display: inline;
+    vertical-align: middle;
+    margin: 0 20px;
+}
+
+.content img {
+    filter: contrast(150%);
+}
+
+.info {
+    margin: 0 80px;
+}
