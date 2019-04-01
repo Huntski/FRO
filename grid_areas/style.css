@@ -1,0 +1,192 @@
+/*
+*   author: Wiebe Ranzijn MD1A
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
+
+
+/* -----------------global css-------------------- */
+
+body {
+    display: grid;
+    grid-gap: 0.2em;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    padding: 2em;
+}
+
+header, aside {
+    background: #2b80ffb9;
+}
+
+h1, h3 {
+    font-family: 'Libre Franklin';
+}
+
+h1 {
+    color: #47A;
+}
+
+/* section */
+section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin: 0;
+}
+
+section img {
+    max-width: 100%;
+}
+
+.numr {
+    background: #47a;
+    color: #fff;
+    font-size: 3em;
+    width: 1.2em;
+    text-align: right;
+    padding: 0.2em;
+    margin: 0;
+}
+
+/* aside */
+aside {
+    padding: 1em;
+}
+
+aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+aside h3 {
+    background: #47a;
+    padding: 2em;
+    color: #fff;
+}
+
+aside a {
+    text-decoration: none;
+    padding: 2em;
+    display: block;
+}
+aside a:hover {
+    background: #a973ff;
+    color: #fff;
+}
+
+article {
+    padding: 1em;
+}
+
+/* footer */
+footer {
+    background: #333;
+    color: #eee;
+    padding: 2em;
+}
+
+/* --------------------layout css--------------------------- */
+
+
+@media screen and (min-width: 740px) {
+    .image {
+        display: block;
+        background: url('network.png');
+        background-size: cover;
+        background-position: center center;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "head head"
+        "t1 t2"
+        "t3 t3"
+        "t4 t5"
+        "t6 img"
+        "t7 img"
+        "t10 t10"
+        "aside t8"
+        "aside t9"
+        "foot foot";
+    }
+
+    header {
+        grid-area: head;
+    }
+
+    .image {
+        grid-area: img;
+    }
+
+    .bewust {
+        grid-area: t1;
+    }
+
+    .onderwerp {
+        grid-area: t2;
+    }
+
+    .levendig {
+        grid-area: t3;
+    }
+
+    .compositie {
+        grid-area: t4;
+    }
+
+    .wissel {
+        grid-area: t5;
+    }
+
+    .ingewikkeld {
+        grid-area: t6;
+    }
+
+    .drie {
+        grid-area: t7;
+    }
+
+    .witbalans {
+        grid-area: t8;
+    }
+
+    .bestaandlicht {
+        grid-area: t9;
+    }
+
+    .iso {
+        grid-area: t10;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    footer {
+        grid-area: foot;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+	body {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas: "head head head"
+		"t1 t1 t1"
+		"t2 t2 t2"
+		"t3 t3 t3"
+		"t4 t5 t5"
+		"t6 t7 img"
+		"t8 t8 img"
+        "t9 aside aside"
+        "t10 t10 t10"
+        "foot foot foot";
+	}
+}
